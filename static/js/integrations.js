@@ -19,8 +19,8 @@ const W3afIntegration = {
     >
         <template #body>
             <div class="form-group">
-            
-                <h9>Config File</h9>
+
+                <!--<h9>Config File</h9>
                 <p>
                     <h13>Optional</h13>
                 </p>
@@ -29,7 +29,7 @@ const W3afIntegration = {
                         placeholder="/path/to/custom.w3af"
                         :class="{ 'is-invalid': error.config_file }">
                 <div class="invalid-feedback">[[ error.config_file ]]</div>
-            
+
 
                 <h9>Save intermediates to</h9>
                 <p>
@@ -39,7 +39,7 @@ const W3afIntegration = {
                        placeholder=""
                        v-model="save_intermediates_to"
                        :class="{ 'is-invalid': error.save_intermediates_to }">
-                <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
+                <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>-->
             </div>
         </template>
         <template #footer>
@@ -72,16 +72,16 @@ const W3afIntegration = {
                 config,
                 is_default,
                 project_id,
-                config_file,
-                save_intermediates_to,
+                // config_file,
+                // save_intermediates_to,
                 status,
             } = this
             return {
                 config,
                 is_default,
                 project_id,
-                config_file,
-                save_intermediates_to,
+                // config_file,
+                // save_intermediates_to,
                 status,
             }
         },
@@ -209,8 +209,8 @@ const W3afIntegration = {
             test_connection_status: 0,
             id: null,
 
-            config_file: "",
-            save_intermediates_to: '/data/intermediates/dast',
+            // config_file: "",
+            // save_intermediates_to: '/data/intermediates/dast',
 
             pluginName: 'security_scanner_w3af',
             api_url: V.build_api_url('integrations', 'integration') + '/',

@@ -11,13 +11,13 @@ const W3afIntegration = {
                 config,
                 is_default,
                 selected_integration: id,
-                save_intermediates_to,
+                // save_intermediates_to,
             } = this
             return {
                 config,
                 is_default,
                 id,
-                save_intermediates_to,
+                // save_intermediates_to,
             }
         },
     },
@@ -47,7 +47,7 @@ const W3afIntegration = {
                 response.json().then(
                     errorData => {
                         errorData.forEach(item => {
-                            console.debug('SSLyze item error', item)
+                            console.debug('w3af item error', item)
                             this.error = {[item.loc[0]]: item.msg}
                         })
                     }
@@ -62,8 +62,7 @@ const W3afIntegration = {
             config: {},
             error: {},
 
-            nikto_parameters: "",
-            save_intermediates_to: '/data/intermediates/dast',
+            // save_intermediates_to: '/data/intermediates/dast',
         })
     },
     template: `
@@ -78,7 +77,7 @@ const W3afIntegration = {
             </div>
 
             <div class="form-group">
-                <h9>Save intermediates to</h9>
+                <!--<h9>Save intermediates to</h9>
                 <p>
                     <h13>Optional</h13>
                 </p>
@@ -86,7 +85,7 @@ const W3afIntegration = {
                     placeholder=""
                     v-model="save_intermediates_to"
                     :class="{ 'is-invalid': error.save_intermediates_to }">
-                <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
+                <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>-->
             </div>
         </div>
     `
@@ -94,4 +93,3 @@ const W3afIntegration = {
 
 
 register_component('scanner-w3af', W3afIntegration)
-
